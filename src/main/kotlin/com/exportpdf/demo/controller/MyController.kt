@@ -370,7 +370,9 @@ fun signaturesSection(): String {
             <div class="row">
                   <div class="signatureColumn first">
                     <p class="label">Podpis za dodavatele</p>
-                    <div class="signatureContainer"></div>
+                    <div class="signatureContainer">
+                        <img src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-featured-image-1200.png">
+                    </div>
                     <p class="name">Timoty Bohaty</p>
                   </div>
                   <div class="signatureColumn">

@@ -118,7 +118,6 @@ img {
     position: absolute;
     bottom: 0;
     right: -100px;
-    background: grey;
 }
 
 .detailsSection {
@@ -182,7 +181,6 @@ table {
     height: 100px;
     width: 100px;
     margin-bottom: 14px;
-    background: grey;
 }
 
 .footer {
