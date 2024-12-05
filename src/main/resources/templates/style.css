@@ -1,6 +1,13 @@
 @font-face {
     font-family: 'PlusJakartaSans';
     src: url('src/main/resources/fonts/PlusJakartaSans.ttf');
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('src/main/resources/fonts/PlusJakartaSans-Bold.ttf');
+    font-weight: bold;
 }
 
 @page {  size: 9in 11in; }
@@ -17,12 +24,17 @@ body {
     width: 770px;
     margin: auto;
     font-family: "PlusJakartaSans";
+    font-weight: regular;
 }
 
 .clearfix::after {
   content: "";
   clear: both;
   display: block;
+}
+
+strong: {
+    font-weight: 700;
 }
 
 .divider {
@@ -41,7 +53,6 @@ body {
 
 p {
     font-size: 14px;
-    font-weight: 500;
     margin: 0;
 }
 

@@ -1,5 +1,6 @@
 package com.exportpdf.demo.controller
 
+import com.openhtmltopdf.outputdevice.helper.BaseRendererBuilder
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder
 import org.jsoup.Jsoup
 import org.jsoup.helper.W3CDom
@@ -175,10 +176,12 @@ class MyController {
         val outputStream = ByteArrayOutputStream()
 
         val fontFile = File("src/main/resources/fonts/PlusJakartaSans.ttf")
+        val boldFontFile = File("src/main/resources/fonts/PlusJakartaSans-Bold.ttf")
         val builder = PdfRendererBuilder()
 
         try {
             builder.useFont(fontFile, "PlusJakartaSans")
+            builder.useFont(boldFontFile, "PlusJakartaSans")
             builder.useFastMode()
             builder.withW3cDocument(W3CDom().fromJsoup(document), "/")
             builder.toStream(outputStream)
