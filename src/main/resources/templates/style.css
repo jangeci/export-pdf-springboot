@@ -118,8 +118,8 @@ img {
     padding: 14px 0 16px;
 }
 
-.itemsSection .container {
-    padding-right: 14px;
+table {
+    width: 100%;
 }
 
 .grow {

@@ -177,8 +177,6 @@ class MyController {
         val fontFile = File("src/main/resources/fonts/PlusJakartaSans.ttf")
         val builder = PdfRendererBuilder()
 
-        val baseUri = File("src/main/resources").toURI()
-
         try {
             builder.useFont(fontFile, "PlusJakartaSans")
             builder.useFastMode()
@@ -316,9 +314,7 @@ fun itemsContent(hasVat: Boolean, items: Array<SingleInvoiceItem>): String {
     }
 
     return """
-        <div class="allItems">    
             $content
-        </div>
     """.trimIndent()
 }
 
