@@ -3,11 +3,16 @@
     src: url('src/main/resources/fonts/PlusJakartaSans.ttf');
 }
 
+@page {  size: 9in 11in; }
+
 * {
     box-sizing: border-box;
 }
 
-
+html {
+    width: 770px;
+    margin: auto;
+}
 body {
     width: 770px;
     margin: auto;

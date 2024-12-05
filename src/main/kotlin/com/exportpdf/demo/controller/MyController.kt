@@ -160,7 +160,7 @@ class MyController {
 
         htmlTemplate = htmlTemplate.replace("{{css}}", cssContent)
             .replace("{{header}}", headerHtml(1, 245))
-            .replace("{{companiesSection}}", companiesSection(company1, company2))
+            .replace("{{companiesSection}}", companiesSection(company1 = company1, company2 = company2))
             .replace(
                 "{{detailsSection}}",
                 detailsSection(start = "27.11.2024", end = "27.11.2024", address = "Opletalova 1535/4, 110 00 Praha, Česká republika")
@@ -213,8 +213,8 @@ fun companiesSection(company1: Company, company2: Company): String {
         <div class="divider"></div>
         <div class="container companySection">
             <div class="row">
-                ${companyColumn(true, company1)}
                 ${companyColumn(false, company2)}
+                ${companyColumn(true, company1)}
             </div>
              <div class="clearfix"></div>
         </div>
@@ -223,7 +223,7 @@ fun companiesSection(company1: Company, company2: Company): String {
 
 fun companyColumn(isSupplier: Boolean, company: Company): String {
     val label = if (isSupplier) "Dodavatel" else "Odběratel"
-    val logo = if (company.logo != null) """<img src=""/>""" else ""
+    val logo = if (company.logo != null) """<div class="logoContainer"><img src=""/></div>""" else ""
 
     return """
         <div class="company">
@@ -236,7 +236,7 @@ fun companyColumn(isSupplier: Boolean, company: Company): String {
             <p>IČO: ${company.ico}</p>
             <div class="lastItem">            
                 <p>DIČ: ${company.dic}</p>
-                <div class="logoContainer">${logo}</div>
+                ${logo}
             </div>
         </div>
     """.trimIndent()
