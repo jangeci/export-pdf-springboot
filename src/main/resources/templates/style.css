@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('src/main/resources/fonts/PlusJakartaSans.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 770px;
+    margin: auto;
+    font-family: "PlusJakartaSans";
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.divider {
+    height: 1px;
+    background: #dedede;
+    width: 100%;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.label {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 9px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.container {
+    width: 100%;
+    padding: 0 22px;
+}
+
+.header {
+    padding: 20px 22px;
+}
+
+.header .text1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header .text2 {
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+    top: 8px;
+}
+
+.companySection {
+    padding: 18px 22px 24px;
+}
+
+.company {
+    width: 50%;
+    position: relative;
+    float: right;
+}
+
+.companyName {
+    margin-bottom: 4px;
+}
+
+.company .lastItem {
+    display: inline-block;
+    position: relative;
+}
+
+.company .lastItem p {
+    display: inline-block;
+}
+
+.logoContainer {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    background: grey;
+}
+
+.detailsSection {
+    padding: 12px 22px 14px;;
+}
+
+.detailColumn {
+    float: left;
+    min-width: 128px;
+}
+
+.itemsSection {
+    padding: 14px 0 16px;
+}
+
+.itemsSection .container {
+    padding-right: 14px;
+}
+
+.grow {
+    width: 100%;
+}
+
+.cell {
+    padding: 0 8px;
+    text-align: center;
+}
+.cell.left {
+    padding-left: 22px;
+    text-align: left;
+}
+
+.itemsRow td{
+    padding-bottom: 12px;
+}
+
+.totalSectionTop td {
+    padding-top: 12px;
+
+}
+
+.extraDivider {
+    border-top: 4px solid black;
+}
+
+.totalSection {
+    padding-bottom: 16px;
+}
+
+.signatureColumn {
+    width: 50%;
+    float: left;
+}
+
+.signaturesSection {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.signatureContainer {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 14px;
+    background: grey;
+}
+
+.footer {
+    padding: 12px 22px;
+}
+
+.footer p {
+    font-size: 12px;
+}
