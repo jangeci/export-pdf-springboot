@@ -170,7 +170,9 @@ class MyController {
             .replace("{{signaturesSection}}", signaturesSection())
             .replace("{{footer}}", footer())
 
-        val document: Document = Jsoup.parse(htmlTemplate, "/", org.jsoup.parser.Parser.xmlParser())
+        val baseUri = File("src/main/resources").toURI()
+
+        val document: Document = Jsoup.parse(htmlTemplate, baseUri.toString(), org.jsoup.parser.Parser.xmlParser())
         document.outputSettings().syntax(Document.OutputSettings.Syntax.xml)
 
         val outputStream = ByteArrayOutputStream()
@@ -183,7 +185,7 @@ class MyController {
             builder.useFont(fontFile, "PlusJakartaSans")
             builder.useFont(boldFontFile, "PlusJakartaSans")
             builder.useFastMode()
-            builder.withW3cDocument(W3CDom().fromJsoup(document), "/")
+            builder.withW3cDocument(W3CDom().fromJsoup(document), baseUri.toString())
             builder.toStream(outputStream)
             builder.run()
         } finally {
