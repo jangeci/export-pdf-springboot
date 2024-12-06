@@ -77,6 +77,10 @@ img {
     padding: 20px 22px;
 }
 
+.header .row {
+    position: relative;
+}
+
 .header .text1 {
     font-size: 20px;
     font-weight: 600;
@@ -85,8 +89,9 @@ img {
 .header .text2 {
     font-size: 12px;
     font-weight: 700;
-    position: relative;
-    top: 8px;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
 }
 
 .companySection {
@@ -169,6 +174,10 @@ table {
 
 .totalSection {
     padding-bottom: 16px;
+}
+
+.totalSection p {
+    font-weight: 700;
 }
 
 .signatureColumn {
